@@ -38,11 +38,11 @@ document.querySelector("#skip").addEventListener("click", function () {
 });
 
 document.querySelector("#mute").addEventListener("click", function () {
-  if (video.volume === 0) {
-    video.volume = 1;
+  if (video.muted === true) {
+    video.muted = !video.muted;
     document.querySelector("#mute").innerHTML = "Mute";
   } else {
-    video.volume = 0;
+    video.muted = !video.muted;
     document.querySelector("#mute").innerHTML = "Unmute";
   }
 });
